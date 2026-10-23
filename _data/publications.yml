@@ -1,0 +1,22 @@
+
+
+# - title: "Exploiting Epipolar Geometry for Light Field Referring Image Segmentation"
+#   authors: "Shishun Tian, <b>Qian Xu</b>, Ting Su, Yan Li, Qiong Wang"
+#   venue: "Pattern Recognition (<b>PR</b>), Under Review"
+#   paper:
+#   code:
+#   project:
+
+- title: "Structure-Aware Light Field Referring Image Segmentation via Epipolar Geometric Priors"
+  authors: "<b>Qian Xu</b>, Qiong Wang, Tiantian Zeng, Ting Su, Yan Li, Huiyu Duan, Shishun Tian, Guangtao Zhai"
+  venue: "14th International Conference on Image and Graphics (<b>ICIG</b> 2026), CCF-C, Best Student Paper"
+  paper:
+  code:
+  project:
+
+- title: "Light Field Referring Segmentation: A Benchmark and an LLM-Based Approach"
+  authors: "Shishun Tian, <b>Qian Xu</b>, He Gui, Ting Su, Yan Li, Qiong Wang"
+  venue: "IEEE Transactions on Broadcasting (<b>TBC</b>), 2026"
+  paper: https://doi.org/10.1109/TBC.2026.3659013
+  code: https://github.com/ShishunTian/LFLLM-TBC2026
+  project:

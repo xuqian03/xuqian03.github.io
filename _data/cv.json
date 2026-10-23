@@ -1,0 +1,110 @@
+{
+  "basics": {
+    "name": "Qian Xu",
+    "email": "xuqian0303@163.com",
+    "phone": "",
+    "website": "https://xuqian03.github.io",
+    "summary": "Master's student in Information and Communication Engineering at Shenzhen University. Research interests include light-field referring segmentation, epipolar geometry, and multimodal reasoning with large language models.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Shenzhen",
+      "countryCode": "CN",
+      "region": "Guangdong"
+    },
+    "profiles": [
+      {
+        "network": "ORCID",
+        "username": "0009-0001-3547-2900",
+        "url": "https://orcid.org/0009-0001-3547-2900"
+      },
+      {
+        "network": "GitHub",
+        "username": "xuqian03",
+        "url": "https://github.com/xuqian03"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Zhejiang Zheneng Digital Technology Co., Ltd.",
+      "position": "Intern, Robotics Team, Intelligent Business Division",
+      "url": "",
+      "startDate": "2024-04",
+      "endDate": "2024-08",
+      "summary": "Developed and debugged an inspection-robot management platform (sensor data ingestion) and trained a belt-tear detection algorithm for coal-conveyor inspection.",
+      "highlights": []
+    }
+  ],
+  "education": [
+    {
+      "institution": "Shenzhen University",
+      "area": "Information and Communication Engineering",
+      "studyType": "M.Eng.",
+      "startDate": "2024-09",
+      "endDate": "2027-06",
+      "gpa": "3.48/4.0",
+      "courses": []
+    },
+    {
+      "institution": "Dalian Polytechnic University",
+      "area": "Computer Science and Technology",
+      "studyType": "B.Eng.",
+      "startDate": "2020-09",
+      "endDate": "2024-06",
+      "gpa": "3.36/4.0",
+      "courses": []
+    }
+  ],
+  "skills": [
+    {
+      "name": "Computer Vision",
+      "level": "",
+      "keywords": ["Light-field imaging", "Referring image segmentation", "Epipolar geometry"]
+    },
+    {
+      "name": "Multimodal Learning",
+      "level": "",
+      "keywords": ["Large language models", "Multimodal reasoning"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "IELTS 6.5; CET-6"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Light-field computer vision",
+      "keywords": ["Referring segmentation", "Epipolar geometry"]
+    }
+  ],
+  "references": [],
+  "publications": [
+    {
+      "name": "Light Field Referring Segmentation: A Benchmark and an LLM-Based Approach",
+      "publisher": "IEEE Transactions on Broadcasting",
+      "releaseDate": "2026-03-01",
+      "website": "https://doi.org/10.1109/TBC.2026.3659013",
+      "summary": "First light-field referring segmentation benchmark and an LLM-based multimodal reasoning architecture."
+    },
+    {
+      "name": "Exploiting Epipolar Geometry for Light Field Referring Image Segmentation",
+      "publisher": "Pattern Recognition (Under Review)",
+      "releaseDate": "2026-01-01",
+      "website": "",
+      "summary": "Structure-aware network (EPI-SGLM) with EPI enhancement and epipolar geometric priors."
+    },
+    {
+      "name": "Structure-Aware Light Field Referring Image Segmentation via Epipolar Geometric Priors",
+      "publisher": "ICIG 2026 (CCF-C Oral)",
+      "releaseDate": "2026-08-01",
+      "website": "",
+      "summary": "EPI depth and edge feature extraction for referring segmentation under occlusion."
+    }
+  ],
+  "presentations": [],
+  "teaching": [],
+  "portfolio": []
+}

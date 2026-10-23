@@ -1,0 +1,127 @@
+.news-scroller {
+  /* Custom properties to tweak geometry, colors, and scroll hints */
+  --news-radius: 0.5rem;
+  --news-max-h: clamp(10rem, 50svh, 18rem);
+  --news-fade: 0.8rem;
+  --news-gap-above: 1rem;
+
+  /* Outer spacing and padding so list items are inset slightly */
+  margin-block-start: var(--news-gap-above);
+  padding-block-start: 0.35rem;
+  padding-block-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0.2rem;
+
+  /* Scrollable container with momentum scrolling and rounded corners */
+  position: relative;
+  overflow: auto;
+  max-height: 32rem;
+  max-height: var(--news-max-h);
+  border-radius: var(--news-radius);
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+
+  /* Colors feed both text and gradients */
+  --news-bg: var(--global-bg-color);
+  --news-fg: var(--global-text-color);
+  --news-shadow-strength: 30%;
+  --news-shadow-color: color-mix(in oklab, var(--news-fg) var(--news-shadow-strength), transparent);
+  --news-hint-text: "scroll for more ";
+  --news-hint-fg: var(--news-bg);
+  --news-hint-bg: color-mix(in oklab, var(--news-fg) 65%, transparent);
+
+  background-color: var(--news-bg);
+  color: var(--news-fg);
+
+  /* Two gradients tint the top/bottom edges so the list fades out as it scrolls */
+  background-image:
+    linear-gradient(to bottom, var(--news-bg) 0%, var(--news-bg) 50%, var(--news-bg) 100%),
+    linear-gradient(to top,    var(--news-bg) 0%, var(--news-bg) 50%, var(--news-bg) 100%),
+    linear-gradient(to bottom, var(--news-shadow-color), transparent),
+    linear-gradient(to top,    var(--news-shadow-color), transparent);
+  background-size:
+    100% var(--news-fade),
+    100% var(--news-fade),
+    100% var(--news-fade),
+    100% var(--news-fade);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: top, bottom, top, bottom;
+  background-attachment: local, local, scroll, scroll;
+}
+
+.news-scroller:focus {
+  /* Visible focus treatment for keyboard users */
+  outline: 2px solid color-mix(in oklab, currentColor 40%, transparent);
+  outline-offset: 2px;
+}
+
+.news-hint {
+  /* Sticky badge that floats near the bottom-right */
+  position: sticky;
+  bottom: clamp(0.35rem, 1.75vh, 0.85rem);
+  inset-inline-end: clamp(0.25rem, 1vw, 0.65rem);
+  inset-inline-start: auto;
+  display: block;
+  width: max-content;
+  margin-inline-start: auto;
+
+  padding: 0.2rem 0.3rem;
+  font-size: 0.7rem;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  border-radius: 999px;
+
+  color: var(--news-hint-fg);
+  background: color-mix(in oklab, var(--news-hint-bg) 80%, transparent);
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+
+  opacity: 0.92;
+  transform: translateY(0);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .news-hint {
+    /* Respect reduced-motion preference */
+    transition: none;
+    animation: none !important;
+  }
+}
+
+@supports (scroll-timeline-name: --news-scroll) {
+  .news-scroller {
+    scroll-timeline-name: --news-scroll;
+    scroll-timeline-axis: block;
+  }
+  .news-hint {
+    animation: news-hint-fade linear both;
+    animation-duration: 1s;
+    animation-timeline: --news-scroll;
+  }
+  @supports (animation-range: 0% 100%) {
+    .news-hint {
+      animation-range: 75% 100%;
+    }
+  }
+}
+
+@keyframes news-hint-fade {
+  from {
+    opacity: 0.92;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(0.35rem);
+  }
+}
+
+.news-scroller::-webkit-scrollbar {
+  width: 8px;
+  background: var(--news-bg);
+}
+.news-scroller::-webkit-scrollbar-thumb {
+  background: rgba(20, 20, 20, 0.3);
+  border-radius: 4px;
+}

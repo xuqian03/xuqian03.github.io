@@ -1,0 +1,9 @@
+/* Footer overrides kept separate from the upstream layout styles. */
+body {
+  padding-bottom: 0;
+}
+
+.page__footer {
+  position: static;
+  bottom: auto;
+}

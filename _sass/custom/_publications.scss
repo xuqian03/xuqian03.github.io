@@ -1,0 +1,59 @@
+/* ========= Publications layout ========= */
+
+/* Gallery spacing (increase gap/margins if cards feel cramped) */
+.pub-gallery {
+  display: grid;
+  gap: 1.5rem;
+  margin-block: 1.25rem 2rem;
+}
+
+/* Card shell: tweak padding or shadow strength to taste */
+.pub-card {
+  display: flex;
+  gap: 0.5rem;                /* Space between teaser image and text */
+  padding: 0.3rem 0.3rem;    /* Inner breathing room */
+  border-radius: 0.5rem;
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  box-shadow: 0 0.3rem 1.4rem rgba(15, 23, 42, 0.14); /* Card lift */
+  align-items: center;
+}
+
+/* Media column: adjust width for larger/smaller thumbnails */
+.pub-card__media {
+  flex: 0 0 220px;
+  align-self: center;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  background: var(--global-bg-color);
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* Text stack */
+.pub-card__body {
+  flex: 1;
+  // line-height: 1.55;
+  padding-block: 0.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Responsive: stack media atop text on narrow screens */
+@media (max-width: 640px) {
+  .pub-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pub-card__media {
+    width: 100%;
+    flex-basis: auto;
+  }
+}
