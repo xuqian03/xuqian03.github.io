@@ -17,84 +17,28 @@ I am currently seeking a position as a doctor.
 
 ## 📢 News
 
-{: #news }
 {% if site.data.news %}
-
-- {% for item in site.data.news %}
-- {{ item.text }}
-- {% endfor %}
-
-scroll for more ↓
-
- {% endif %}
+{::nomarkdown}
+<div class="news-scroller" id="news" role="region" aria-label="News">
+<ul>
+{% for item in site.data.news %}<li>{{ item.text }}</li>{% endfor %}
+</ul>
+{% assign news_count = site.data.news | size %}{% if news_count > 6 %}<div class="news-hint" aria-hidden="true">scroll for more ↓</div>{% endif %}
+</div>
+{:/nomarkdown}
+{% endif %}
 
 ## Publications
 
-{: #publications }
 {% assign pubs = site.data.publications %}
 {% if pubs %}
-
-{% for pub in pubs %} {% assign has_image = pub.image | default: '' | strip %} {% if has_image != '' %}
-
-![{{ pub.title }}]({{ pub.image | relative_url }})
-
- {% if pub.paper %} [{{ pub.title }}]({{ pub.paper }}) {% else %} {{ pub.title }} {% endif %}
-
-{{ pub.authors }}
-
-*{{ pub.venue }}*
-
- {% if pub.note %}
-
-{{ pub.note }}
-
-{% endif %} {% if pub.paper or pub.code or pub.project %}
-
- {% if pub.paper %}[[Paper]({{ pub.paper }})]{% endif %} {% if pub.code %}[[Code]({{ pub.code }})]{% endif %} {% if pub.project %}[[Project]({{ pub.project }})]{% endif %}
-
- {% endif %}
-
- {% endif %} {% endfor %}
-
- {% endif %}
-
-{% assign has_text_only = false %}
-{% assign has_gallery = false %}
-{% for pub in pubs %}
-  {% assign has_image = pub.image | default: '' | strip %}
-  {% if has_image != '' %}
-    {% assign has_gallery = true %}
-  {% else %}
-    {% assign has_text_only = true %}
-  {% endif %}
-{% endfor %}
-
-{% if has_text_only %}
-{% if has_gallery %}
-
-### Additional Publications
-
+{::nomarkdown}
+<div class="pub-gallery">
+{% for pub in pubs %}{% assign has_image = pub.image | default: '' | strip %}
+<article class="pub-card{% if has_image == '' %} pub-card--text{% endif %}">{% if has_image != '' %}<a class="pub-card__figure" href="{{ pub.image | relative_url }}" target="_blank" rel="noopener" aria-label="Open the full-size figure for {{ pub.title | escape }}"><img src="{{ pub.image | relative_url }}" alt="{{ pub.title | escape }}" loading="lazy"></a>{% endif %}<div class="pub-card__body"><h3 class="pub-card__title">{% if pub.paper and pub.paper != '' %}<a href="{{ pub.paper }}" target="_blank" rel="noopener">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</h3><p class="pub-card__authors">{{ pub.authors }}</p><p class="pub-card__venue">{{ pub.venue }}</p>{% if pub.note and pub.note != '' %}<p class="pub-card__note">{{ pub.note }}</p>{% endif %}{% if pub.paper or pub.code or pub.project %}<p class="pub-card__links">{% if pub.paper and pub.paper != '' %}<a class="pub-link" href="{{ pub.paper }}" target="_blank" rel="noopener">Paper</a>{% endif %}{% if pub.code and pub.code != '' %}<a class="pub-link" href="{{ pub.code }}" target="_blank" rel="noopener">Code</a>{% endif %}{% if pub.project and pub.project != '' %}<a class="pub-link" href="{{ pub.project }}" target="_blank" rel="noopener">Project</a>{% endif %}</p>{% endif %}</div></article>
+{% endfor %}</div>
+{:/nomarkdown}
 {% endif %}
-
-- {% for pub in pubs %} {% assign has_image = pub.image | default: '' | strip %} {% if has_image == '' %}
-- {% if pub.paper %} [{{ pub.title }}]({{ pub.paper }}) {% else %} {{ pub.title }} {% endif %}
-
-  {{ pub.authors }}
-
-  *{{ pub.venue }}*
-
-   {% if pub.note %}
-
-  {{ pub.note }}
-
-  {% endif %} {% if pub.paper or pub.code or pub.project %}
-
-   {% if pub.paper %}[[Paper]({{ pub.paper }})]{% endif %} {% if pub.code %}[[Code]({{ pub.code }})]{% endif %} {% if pub.project %}[[Project]({{ pub.project }})]{% endif %}
-
-   {% endif %}
-- {% endif %} {% endfor %}
-
- {% endif %}
 
 
 ## Honors & Awards

@@ -18,7 +18,7 @@
 - title: "Light Field Referring Segmentation: A Benchmark and an LLM-Based Approach"
   authors: "Shishun Tian, <b>Qian Xu</b>, He Gui, Ting Su, Yan Li, Qiong Wang"
   venue: "IEEE Transactions on Broadcasting (<b>TBC</b>), 2026"
-  image: /images/publications/icig2026.png
+  image: /images/publications/tbc2026.png
   paper: https://doi.org/10.1109/TBC.2026.3659013
   code: https://github.com/ShishunTian/LFLLM-TBC2026
   project:

@@ -45,3 +45,6 @@
 
 /* Load personal overrides after the upstream layout styles. */
 @import "custom/footer";
+
+/* Column-width overrides must win over layout/_page.scss and layout/_archive.scss. */
+@import "custom/layout";

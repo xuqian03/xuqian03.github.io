@@ -1,0 +1,13 @@
+/* ==========================================================================
+   Layout overrides — reclaim the empty right-hand column
+   The theme reserves 16.949% right padding on .page for a right-hand TOC
+   sidebar, but no page on this site uses one, which leaves a ~210px gap
+   between the text column and the right edge of the container.
+   ========================================================================== */
+
+@media (min-width: 925px) {
+  .page,
+  .archive {
+    padding-right: 0;
+  }
+}
