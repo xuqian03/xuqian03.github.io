@@ -11,7 +11,7 @@
   authors: "<b>Qian Xu</b>, Qiong Wang, Tiantian Zeng, Ting Su, Yan Li, Huiyu Duan, Shishun Tian, Guangtao Zhai"
   venue: "14th International Conference on Image and Graphics (<b>ICIG</b> 2026), CCF-C, Best Student Paper"
   image: /images/publications/icig2026.png
-  paper:
+  paper: https://doi.org/10.1007/978-981-92-7198-6_50
   code:
   project:
 

@@ -9,9 +9,9 @@ redirect_from:
 
 
 
-I am Qian Xu, currently a Master's student in Information and Communication Engineering at the [College of Electronics and Information Engineering](https://ceie.szu.edu.cn/), [Shenzhen University (SZU)](https://en.szu.edu.cn/), advised by [Prof. Shishun Tian](https://shishuntian.github.io/).
+I am Qian Xu, currently a Master's student in Information and Communication Engineering at the [College of Electronics and Information Engineering](https://ceie.szu.edu.cn/), [Shenzhen University (SZU)](https://en.szu.edu.cn/).
 
-My research focuses on light-field computer vision, with an emphasis on referring image segmentation, epipolar geometry, and multimodal reasoning with large language models. I am interested in building structure-aware frameworks that fuse natural language instructions with high-dimensional light-field cues for robust perception in complex, occluded scenes.
+My research focuses on light-field computer vision, with an emphasis on referring image segmentation and multimodal reasoning with large language models. 
 
 I am currently seeking a position as a doctor.
 
@@ -47,4 +47,3 @@ I am currently seeking a position as a doctor.
 
 * University Special Scholarship, Shenzhen University
 * University First-Class Scholarship, Shenzhen University
-* University First-Class Scholarship, Dalian Polytechnic University

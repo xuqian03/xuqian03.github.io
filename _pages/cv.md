@@ -14,8 +14,6 @@ A PDF version of my CV is available [here]({{ base_path }}/files/CV_Qian_Xu.pdf)
 Education
 ======
 * M.Eng. in Shenzhen University, Sep. 2024 – Jun. 2027
-  * Advisor: Prof. Shishun Tian
-* B.Eng. in Dalian Polytechnic University, Sep. 2020 – Jun. 2024
 
 Research Experience
 ======
@@ -36,5 +34,3 @@ Honors and Awards
 ======
 * University Special Scholarship, Shenzhen University
 * University First-Class Scholarship, Shenzhen University
-* University First-Class Scholarship, Dalian Polytechnic University
-* University Third-Class Scholarship (three times), Dalian Polytechnic University
